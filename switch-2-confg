@@ -1,0 +1,164 @@
+
+!
+version 12.0
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname switch-2
+!
+enable password cisco
+!
+!
+!
+!
+!
+!
+ip subnet-zero
+!
+!
+!
+interface FastEthernet0/1
+ port group 1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+ port group 1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/6
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+ switchport access vlan 10
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface FastEthernet0/25
+!
+interface FastEthernet0/26
+!
+interface FastEthernet0/27
+!
+interface FastEthernet0/28
+!
+interface FastEthernet0/29
+ switchport access vlan 10
+!
+interface FastEthernet0/30
+ switchport access vlan 10
+!
+interface FastEthernet0/31
+ switchport access vlan 100
+!
+interface FastEthernet0/32
+ switchport access vlan 10
+!
+interface FastEthernet0/33
+ switchport access vlan 20
+!
+interface FastEthernet0/34
+ switchport access vlan 20
+!
+interface FastEthernet0/35
+ switchport access vlan 20
+!
+interface FastEthernet0/36
+ switchport access vlan 20
+!
+interface FastEthernet0/37
+!
+interface FastEthernet0/38
+!
+interface FastEthernet0/39
+!
+interface FastEthernet0/40
+!
+interface FastEthernet0/41
+!
+interface FastEthernet0/42
+!
+interface FastEthernet0/43
+!
+interface FastEthernet0/44
+!
+interface FastEthernet0/45
+ switchport access vlan 100
+!
+interface FastEthernet0/46
+ switchport access vlan 100
+!
+interface FastEthernet0/47
+ switchport access vlan 100
+!
+interface FastEthernet0/48
+ switchport access vlan 100
+!
+interface GigabitEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface VLAN1
+ ip address 172.16.1.2 255.255.255.248
+ no ip directed-broadcast
+ no ip route-cache
+!
+!
+line con 0
+ transport input none
+ stopbits 1
+line vty 0 4
+ password cisco
+ login
+line vty 5 15
+ login
+!
+end

@@ -1,0 +1,222 @@
+
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname switch-1
+!
+enable password cisco
+!
+no aaa new-model
+ip subnet-zero
+no ip domain-lookup
+!
+ip dhcp pool switchconfig
+   network 172.16.3.0 255.255.255.248
+   lease 0 0 30
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+interface Port-channel2
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/4
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/5
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/6
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/7
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/8
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/9
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/10
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/11
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/12
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/13
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/14
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/15
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/16
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/17
+ switchport access vlan 10
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/18
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/19
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/20
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/21
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/22
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/23
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/24
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/25
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/26
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/27
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/28
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/29
+ switchport access vlan 10
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/30
+ switchport access vlan 10
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/31
+ switchport access vlan 100
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/32
+ switchport access vlan 10
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/33
+ switchport access vlan 20
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/34
+ switchport access vlan 20
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/35
+ switchport access vlan 20
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/36
+ switchport access vlan 20
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/37
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/38
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/39
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/40
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/41
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/42
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/43
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/44
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/45
+ switchport access vlan 100
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/46
+ switchport access vlan 100
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/47
+ switchport access vlan 100
+ switchport mode dynamic desirable
+!
+interface FastEthernet0/48
+ switchport access vlan 100
+ switchport mode dynamic desirable
+!
+interface GigabitEthernet0/1
+ switchport mode dynamic desirable
+!
+interface GigabitEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface Vlan1
+ ip address 172.16.1.1 255.255.255.248
+ no ip route-cache
+!
+ip classless
+ip http server
+!
+!
+!
+control-plane
+!
+!
+line con 0
+line vty 0 4
+ password cisco
+ login
+line vty 5 15
+ login
+!
+end
